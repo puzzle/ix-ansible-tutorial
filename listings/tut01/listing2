@@ -1,0 +1,4 @@
+{
+    "ansible_host": "10.1.2.1",
+    "ansible_user": "ansible",
+}

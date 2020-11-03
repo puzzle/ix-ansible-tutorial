@@ -1,0 +1,6 @@
+[defaults]
+inventory = tutorial.yml
+inventory_plugins = inventory_plugins
+
+[inventory]
+enable_plugins = auto

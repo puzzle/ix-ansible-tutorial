@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+
+import argparse
+import json
+import sys
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Beispiel Inventory-Skript')
+    parser.add_argument('--list', action='store_true')
+    parser.add_argument('--host')
+    return parser.parse_args()
+
+
+def main():
+    args = parse_args()
+    nodes = dict(
+        node1=dict(ansible_host="10.1.2.1", ansible_user="ansible"),
+        node2=dict(ansible_host="10.1.2.2", ansible_user="ansible"))
+    inventory = dict(_meta=dict(hostvars=nodes),
+                                all=dict(hosts=list(nodes.keys())))
+    if args.list:
+        print(json.dumps(inventory, indent=4))
+    elif args.host:
+        try:
+            print(json.dumps(nodes[args.host], indent=4))
+        except KeyError:
+            sys.exit(1)
+
+
+if __name__ == '__main__':
+    main()
