@@ -1,0 +1,4 @@
+- name: populate facts with current users
+  tutorial_facts:
+- debug:
+    msg: "{{ ansible_facts.current_users}}"

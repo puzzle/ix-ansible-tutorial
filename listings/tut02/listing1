@@ -1,0 +1,47 @@
+"vars": {
+        "ansible_all_ipv4_addresses": [
+            "192.168.1.2"
+        ],
+        "ansible_apparmor": {
+            "status": "enabled"
+        },
+        "ansible_architecture": "x86_64",
+        "ansible_bios_date": "01/11/2020",
+        "(...)",
+        "hostvars": {
+            "host_name1": {
+                "ansible_all_ipv4_addresses": [
+                    "192.168.1.2"
+                ],
+                "ansible_apparmor": {
+                    "status": "enabled"
+                },
+                "ansible_architecture": "x86_64",
+                "ansible_bios_date": "01/11/2020",
+                "(...)",
+            }
+            "host_name2": {
+                "ansible_all_ipv4_addresses": [
+                    "192.168.1.2"
+                ],
+                "(...)",
+            }
+        },
+        "(...)",
+        "ansible_facts": {
+            "all_ipv4_addresses": [
+                "192.168.1.2"
+            ],
+            "ansible_local": {
+                "dyntest": {
+                    "foo1": "bar1",
+                    "foo2": "bar2"
+                }
+            },
+            "apparmor": {
+                "status": "enabled"
+            },
+            "(...)",
+        },
+        "(...)"
+    }

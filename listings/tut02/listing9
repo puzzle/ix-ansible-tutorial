@@ -1,0 +1,7 @@
+- debug:
+    msg: "{{ lookup('tutorial_lookup_2', "pfx_", rand_chars='aeiou', rand_len=5 ) }}"
+- debug:
+    msg: "Running loop for {{ item }}"
+  with_tutorial_lookup_2:
+  - "prefix1-"
+  - "prefix2-"
