@@ -1,0 +1,9 @@
+namespace: puzzle
+name: ixtutorial
+version: 1.0.0
+readme: README.md
+authors:
+- Mark Pröhl <proehl@puzzle-itc.de>
+description: demo collection for tutorial in iX magazine
+license_file: '../LICENSE'
+dependencies: {}
