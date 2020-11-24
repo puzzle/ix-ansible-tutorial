@@ -27,7 +27,7 @@ DOCUMENTATION = '''
 '''
 
 EXAMPLES = '''
-    plugin: tutorial_inventory
+    plugin: puzzle.ixtutorial.tutorial_inventory
     num_hosts: 10
     name_len: 5
     hostname_chars: abcdefghijkxyz
