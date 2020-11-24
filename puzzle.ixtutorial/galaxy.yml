@@ -5,5 +5,5 @@ readme: README.md
 authors:
 - Mark Pröhl <proehl@puzzle-itc.de>
 description: demo collection for tutorial in iX magazine
-license_file: '../LICENSE'
+license_file: 'LICENSE'
 dependencies: {}
