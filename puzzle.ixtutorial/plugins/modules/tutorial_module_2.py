@@ -41,7 +41,7 @@ RETURN = r'''
 '''
 
 from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.tutorial_utils import VboxVMS
+from ansible_collections.puzzle.ixtutorial.plugins.module_utils.tutorial_utils import VboxVMS
 
 
 def main():
