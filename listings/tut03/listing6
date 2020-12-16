@@ -1,0 +1,51 @@
+---
+- name: test play for ix tutorial
+  hosts: localhost
+  gather_facts: false
+  collections:
+    - puzzle.ixtutorial
+  tasks:
+    - name: Print the string Hello, World
+      debug:
+        msg: "{{ lookup('puzzle.ixtutorial.tutorial_lookup_1') }} ..."
+    - name: Print abc_ following 3 random chars taken from x, y or z
+      debug:
+        msg: "{{ lookup('puzzle.ixtutorial.tutorial_lookup_2',
+              'abc_',
+              rand_chars='xyz',
+              rand_len=3 ) }}"
+    - name: Print a random string without prefix of length 10
+      debug:
+        msg: "{{ lookup('puzzle.ixtutorial.tutorial_lookup_2', rand_len=10 ) }}"
+
+    - name: Populate current_users facts
+      puzzle.ixtutorial.tutorial_facts:
+
+    - debug:
+        var: ansible_facts.current_users
+
+    - name: "virtual machine 'node1' should be running..."
+      puzzle.ixtutorial.tutorial_module_2:
+        name: node1
+        state: running
+
+    - name: "virtual machine 'node2' should be powered off..."
+      puzzle.ixtutorial.tutorial_module_2:
+        name: node2
+        state: poweroff
+
+    - name: "get a list of all virtual machines..."
+      puzzle.ixtutorial.tutorial_module_1:
+        state: all
+        register: all_vms
+
+    - debug:
+        msg: "list of all VMs: {{ all_vms.vmlist }}"
+
+    - name: "get a list of all running virtual machines..."
+      puzzle.ixtutorial.tutorial_module_1:
+        state: running
+        register: all_runningvms
+
+    - debug:
+        msg: "list of runing VMs: {{ all_runningvms.vmlist }}"

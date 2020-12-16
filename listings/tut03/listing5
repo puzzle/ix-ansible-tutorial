@@ -1,0 +1,15 @@
+<namespace>/<collectionname>/
+├── docs/
+├── galaxy.yml
+├── plugins/
+│   ├── README.md
+│   ├── action
+│   ├── inventory
+│   ├── lookup
+│   ├── module_utils
+│   ├── modules
+│   └── ...
+├── README.md
+├── roles/
+├── playbook
+└── tests/

@@ -1,0 +1,18 @@
+# Alle verfügbaren VMs anzeigen...
+VBoxManage list vms
+"node1" {49eda2ff-efca-4f2e-b365-9ff5d810c808}
+"node2" {c19b3e51-225c-46a1-b780-f48e9653a561}
+"node3" {8d538488-bd0d-489b-920d-0801c539171e}
+
+# Die VM `node1` starten...
+vboxmanage startvm node1
+Waiting for VM "node1" to power on...
+VM "node1" has been successfully started.
+
+# Alle laufenden VMs anzeigen...
+VBoxManage list runningvms
+"node1" {49eda2ff-efca-4f2e-b365-9ff5d810c808}
+
+# Die VM `node1` ausschalten...
+vboxmanage controlvm node1 poweroff
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
