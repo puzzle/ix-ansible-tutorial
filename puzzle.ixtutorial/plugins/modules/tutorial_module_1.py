@@ -5,7 +5,7 @@
 
 DOCUMENTATION = r'''
 ---
-module: tutorial_module1
+module: tutorial_module_1
 short_description: List VirtualBox VMs
 description:
     - This module lists all VirtualBox VMs
@@ -28,16 +28,19 @@ author: "Max Mustermann (max.muster@example.com)"
 
 EXAMPLES = r'''
 - name: "List VMs"
-  tutorial_module1:
+  tutorial_module_1:
   register: _all_vms
 - name: "List VMs"
-  tutorial_module1:
+  tutorial_module_1:
     only_running: true
   register: _all_running_vms
 '''
 
 RETURN = r'''
-
+vmlist:
+    description: list of VMs
+    type: list
+    sample: [ node1, node2 ]
 '''
 
 from ansible.module_utils.basic import AnsibleModule

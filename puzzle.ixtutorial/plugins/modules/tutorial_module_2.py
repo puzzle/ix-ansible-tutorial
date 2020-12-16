@@ -5,7 +5,7 @@
 
 DOCUMENTATION = r'''
 ---
-module: tutorial_module1
+module: tutorial_module_2
 short_description: Start or stop VM
 description:
     - This module starts or stops VirtualBox VMs
@@ -16,8 +16,8 @@ options:
           - name of VM
     state:
         description:
-            - started
-            - stopped
+          - started
+          - stopped
         required: true
         default: all
         choices=['running', 'poweroff']
@@ -31,13 +31,9 @@ author: "Max Mustermann (max.muster@example.com)"
 
 EXAMPLES = r'''
 - name: "start VM node1"
-  tutorial_module2:
+  tutorial_module_2:
     name: node1
     state: running
-'''
-
-RETURN = r'''
-
 '''
 
 from ansible.module_utils.basic import AnsibleModule

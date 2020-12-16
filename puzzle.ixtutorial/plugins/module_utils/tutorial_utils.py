@@ -1,12 +1,9 @@
 """
-...
+Python wrapper for VBoxManage
 """
 
 
 class VboxVMS(object):
-    """
-    ...
-    """
 
     def __init__(self, module):
         self._module = module
@@ -32,7 +29,7 @@ class VboxVMS(object):
 
     def get_all(self):
         """
-        ...
+        List all installed VMs
         """
         rc = self._module.run_command(
             ['VBoxManage', 'list', 'vms']
@@ -43,7 +40,7 @@ class VboxVMS(object):
 
     def get_running(self):
         """
-        ...
+        List all running VMs
         """
         rc = self._module.run_command(
             ['VBoxManage', 'list', 'runningvms']
@@ -53,9 +50,6 @@ class VboxVMS(object):
         return(self.__to_list(rc[1]))
 
     def start(self, name):
-        """
-        ...
-        """
         rc = self._module.run_command(
             ['VBoxManage', 'startvm', name]
         )
@@ -64,13 +58,9 @@ class VboxVMS(object):
         return(self.__to_list(rc[1]))
 
     def stop(self, name):
-        """
-        ...
-        """
         rc = self._module.run_command(
             ['VBoxManage', 'controlvm', name, 'poweroff']
         )
         if rc[0] != 0:
             self.__error(self._module, rc)
         return(self.__to_list(rc[1]))
-
