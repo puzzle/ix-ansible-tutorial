@@ -22,7 +22,7 @@ DOCUMENTATION = """
 EXAMPLES = """
 - name: Fetch serial number for C(node1) via LDAP
   debug:
-    msg: "{{ lookup('tutorial_lookup_3', 'device1',
+    msg: "{{ lookup('puzzle.ixtutorial.tutorial_lookup_3', 'device1',
                     ldap_uri='ldap://127.0.0.1',
                     search_base='dc=example,dc=com'  ) }}"
 """

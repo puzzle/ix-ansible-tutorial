@@ -20,13 +20,13 @@ DOCUMENTATION = """
 EXAMPLES = """
 - name: Print abc_ following 3 random chars taken from x, y or z
   debug:
-    msg: "{{ lookup('tutorial_lookup_2',
+    msg: "{{ lookup('puzzle.ixtutorial.tutorial_lookup_2',
                     'abc_',
                     rand_chars='xyz',
                     rand_len=3 ) }}"
 - name: Print a random string without prefix of length 10
   debug:
-    msg: "{{ lookup('tutorial_lookup_2', rand_len=10 ) }}"
+    msg: "{{ lookup('puzzle.ixtutorial.tutorial_lookup_2', rand_len=10 ) }}"
 """
 
 RETURN = """
