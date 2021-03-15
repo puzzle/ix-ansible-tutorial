@@ -37,7 +37,7 @@
     - name: "get a list of all virtual machines..."
       puzzle.ixtutorial.tutorial_module_1:
         state: all
-        register: all_vms
+      register: all_vms
 
     - debug:
         msg: "list of all VMs: {{ all_vms.vmlist }}"
@@ -45,7 +45,7 @@
     - name: "get a list of all running virtual machines..."
       puzzle.ixtutorial.tutorial_module_1:
         state: running
-        register: all_runningvms
+      register: all_runningvms
 
     - debug:
         msg: "list of runing VMs: {{ all_runningvms.vmlist }}"
