@@ -61,7 +61,7 @@ def main():
     vboxvm = VboxVMS(module)
 
     if name not in vboxvm.get_all():
-        module.fail_json('msg: VM %s not installed' % (name))
+        module.fail_json(msg='VM %s not installed' % (name))
 
     if state == "running":
         if name in vboxvm.get_running():
